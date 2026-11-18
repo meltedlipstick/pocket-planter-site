@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>join the pocket planter beta on TestFlight</title>
+  <meta name="description" content="Try pocket planter, the plant care app for iPhone, before launch. Free public beta on TestFlight for iPhones with iOS 15.1 or later in the US.">
+  <link rel="canonical" href="https://pocketplanter.app/beta.html">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="theme-color" content="#4a2a3d">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="pocket planter">
+  <meta property="og:title" content="join the pocket planter beta">
+  <meta property="og:description" content="A daily plant care plan that adapts to your weather and your rooms, plant ID from a photo, an AI plant helper and a light meter. Free on TestFlight for iPhone.">
+  <meta property="og:url" content="https://pocketplanter.app/beta.html">
+  <meta property="og:image" content="https://pocketplanter.app/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="join the pocket planter beta">
+  <meta name="twitter:description" content="A daily plant care plan that adapts to your weather and your rooms, plant ID from a photo, an AI plant helper and a light meter. Free on TestFlight for iPhone.">
+  <meta name="twitter:image" content="https://pocketplanter.app/og.png">
+  <link rel="preload" href="/fonts/PlayfairDisplay-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/DMSans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/site.css">
+  <style>
+    .hero { background: var(--cream); border-bottom: 1px solid #dfe6b8; padding: 44px 0 52px; overflow: hidden; }
+    .hero .container { display: grid; gap: 28px; align-items: center; }
+    .hero h1 { margin-bottom: 18px; }
+    .hero .lede { margin-bottom: 26px; }
+    .hero-mascot { justify-self: center; width: min(48vw, 190px); height: auto; }
+    .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+    .cta-note { margin: 16px 0 0; font-size: 15px; color: var(--muted); }
+    .cta-note strong { color: var(--plum); }
+    @media (min-width: 768px) {
+      .hero { padding: 64px 0 72px; }
+      .hero .container { grid-template-columns: 1.5fr 1fr; gap: 40px; }
+      .hero-mascot { width: 100%; max-width: 320px; }
+    }
+
+    .features { display: grid; gap: 16px; }
+    .feature-grid { display: grid; gap: 14px; }
+    .feature { display: grid; grid-template-columns: 48px 1fr; gap: 4px 16px; align-items: start; }
+    .feature .icon { grid-row: span 2; width: 48px; height: 48px; border-radius: 14px; background: var(--lime-soft); display: grid; place-items: center; }
+    .feature .icon svg { width: 28px; height: 28px; }
+    .feature h3 { margin: 2px 0 2px; font-size: 20px; }
+    .feature p { margin: 0; font-size: 16px; }
+    .phone { justify-self: center; width: min(68vw, 260px); border: 8px solid var(--plum); border-radius: 36px; overflow: hidden; background: var(--plum); box-shadow: 0 18px 40px rgba(74,42,61,0.18); }
+    .phone img { display: block; width: 100%; height: auto; }
+    .phone-caption { text-align: center; font-size: 14px; color: var(--muted); margin-top: 10px; }
+    @media (min-width: 768px) { .feature-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 960px) { .features { grid-template-columns: 1fr 280px; gap: 40px; align-items: center; } }
+
+    .who { display: grid; gap: 14px; }
+    .check { display: flex; gap: 14px; align-items: flex-start; }
+    .check svg { flex: none; width: 28px; height: 28px; margin-top: 2px; }
+    .check p { margin: 0; }
+    @media (min-width: 960px) { .who { grid-template-columns: repeat(3, 1fr); } }
+
+    .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; counter-reset: step; }
+    .step { display: grid; gap: 14px; }
+    .step-art { background: var(--cream); border-radius: 16px; display: grid; place-items: center; padding: 12px; }
+    .step-art svg { width: 100%; max-width: 300px; height: auto; }
+    .step-num { display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--plum); color: var(--lime); font-weight: 700; margin-bottom: 10px; }
+    .step .btn { margin-top: 6px; }
+    @media (min-width: 768px) { .steps { grid-template-columns: 1fr 1fr; } }
+
+    .ways { display: grid; gap: 14px; }
+    @media (min-width: 960px) { .ways { grid-template-columns: repeat(3, 1fr); } }
+
+    .faq { display: grid; gap: 10px; }
+    .faq details { background: var(--white); border: 1px solid var(--line); border-radius: 16px; }
+    .faq summary { cursor: pointer; list-style: none; padding: 18px 52px 18px 20px; font-weight: 700; font-size: 18px; position: relative; border-radius: 16px; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font-size: 26px; font-weight: 400; color: var(--plum-ink); line-height: 1; }
+    .faq details[open] summary::after { content: "\2212"; }
+    .faq .answer { padding: 0 20px 6px; }
+    .faq .answer ul { padding-left: 20px; margin: 0 0 14px; }
+    .faq .answer li { margin-bottom: 6px; }
+
+    .contact { background: var(--cream); border-radius: var(--radius); padding: 28px 22px; display: grid; gap: 18px; align-items: center; }
+    .contact h2 { margin-bottom: 8px; }
+    .contact p { margin: 0; }
+    @media (min-width: 768px) { .contact { grid-template-columns: 1fr auto; padding: 36px 40px; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="/" aria-label="pocket planter, home">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path class="leaf-primary" d="M6 38 C6 38 4 20 16 10 C28 0 44 8 44 8 C44 8 40 26 28 32 C16 38 6 38 6 38Z"/><path class="leaf-secondary" d="M28 34 C28 34 26 22 34 16 C42 10 48 16 48 16 C48 16 46 28 38 32 C30 36 28 34 28 34Z"/></svg>
+        <span>pocket planter</span>
+      </a>
+      <nav class="site-nav" aria-label="main">
+        <ul>
+          <li><a href="/beta.html" aria-current="page">beta</a></li>
+          <li><a href="/support.html">support</a></li>
+          <li><a href="/privacy.html">privacy</a></li>
+          <li><a href="/terms.html">terms</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div>
+          <span class="eyebrow">public beta &middot; iPhone</span>
+          <h1 id="hero-title">come grow with us: try pocket planter before launch.</h1>
+          <p class="lede">pocket planter is a plant care app that tells you what each plant needs today, based on your weather and the rooms they live in. The beta is free, and your feedback shapes what we ship.</p>
+          <div class="cta-row">
+            <!--
+              TESTFLIGHT_PUBLIC_LINK
+              Paste the public TestFlight link (https://testflight.apple.com/join/XXXXXXXX)
+              into data-testflight-url below. That is the only place it lives: every
+              "join the beta" button on this page reads it from here.
+              While it is empty, the buttons show a disabled "beta opens soon" state.
+            -->
+            <a id="testflight-link" class="btn btn-lime btn-big" href="#" data-testflight-url="" data-label="join the beta on TestFlight">join the beta on TestFlight</a>
+            <a class="btn btn-ghost" href="#how-to-join">how it works</a>
+          </div>
+          <p class="cta-note"><strong>Free.</strong> For iPhone with iOS 15.1 or later, in the US.</p>
+        </div>
+        <img class="hero-mascot" src="/welcoming-novo.webp" width="418" height="560" alt="mochi, the pocket planter mushroom mascot, riding a leaf like a surfboard">
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="what-title">
+      <div class="container features">
+        <div>
+          <div class="section-head">
+            <span class="eyebrow">what it is</span>
+            <h2 id="what-title">a care plan for every plant, in your pocket.</h2>
+            <p>Add your plants, tell us which room they live in, and pocket planter builds a daily list of what to water, mist and feed. Here is what you can try in the beta.</p>
+          </div>
+          <div class="feature-grid">
+            <div class="card feature">
+              <span class="icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="#4a2a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 2v2M12 20v2M2 12h2M4.9 4.9l1.4 1.4M17.7 6.3l1.4-1.4"/><path d="M14 26h11a4 4 0 0 0 0-8 6 6 0 0 0-11.3 1.5A3.3 3.3 0 0 0 14 26z" fill="#e7efc0"/></svg></span>
+              <h3>a daily care schedule</h3>
+              <p>Today's list adapts to your local weather and to each room's light, so a plant by a sunny window gets different care than one in a dim hallway.</p>
+            </div>
+            <div class="card feature">
+              <span class="icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="#4a2a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a3 3 0 0 1 3-3h3l2-3h8l2 3h3a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3z"/><circle cx="16" cy="17" r="5"/></svg></span>
+              <h3>plant ID from a photo</h3>
+              <p>Snap a plant and get its name and a care plan. You can also ask what is wrong with a sad looking leaf.</p>
+            </div>
+            <div class="card feature">
+              <span class="icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="#4a2a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7a3 3 0 0 1 3-3h16a3 3 0 0 1 3 3v11a3 3 0 0 1-3 3h-9l-6 5v-5H8a3 3 0 0 1-3-3z"/><path d="M11 12.5h.01M16 12.5h.01M21 12.5h.01" stroke-width="3"/></svg></span>
+              <h3>ask planter</h3>
+              <p>A friendly AI chat that already knows your plants, your rooms and your weather. Ask anything, from yellow leaves to repotting.</p>
+            </div>
+            <div class="card feature">
+              <span class="icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="#4a2a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22a11 11 0 0 1 22 0"/><path d="M16 22l6-7"/><circle cx="16" cy="22" r="2" fill="#4a2a3d"/><path d="M8.5 14.5l1.5 1.2M16 10.5v2M23.5 14.5l-1.5 1.2"/></svg></span>
+              <h3>a light meter</h3>
+              <p>Use your iPhone camera to measure how much light a spot really gets, then pick the right plant for it.</p>
+            </div>
+          </div>
+        </div>
+        <figure style="margin:0">
+          <div class="phone"><img src="/assets/shots/05-home.webp" width="720" height="1565" decoding="async" alt="The pocket planter home screen: today's tasks grouped by room, with done, snooze and skip buttons for each plant, and mochi the mascot giving a tip."></div>
+          <figcaption class="phone-caption">today's tasks, grouped by room</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="who-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">who it's for</span>
+          <h2 id="who-title">you can join if:</h2>
+        </div>
+        <div class="who">
+          <div class="card check">
+            <svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="#c4d777"/><path d="M8 14.5l4 4 8-9" fill="none" stroke="#4a2a3d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p><strong>You have an iPhone</strong> running iOS 15.1 or later. An Android version is not ready yet.</p>
+          </div>
+          <div class="card check">
+            <svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="#c4d777"/><path d="M8 14.5l4 4 8-9" fill="none" stroke="#4a2a3d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p><strong>You live in the US.</strong> The beta is open in the United States for now.</p>
+          </div>
+          <div class="card check">
+            <svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="#c4d777"/><path d="M8 14.5l4 4 8-9" fill="none" stroke="#4a2a3d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p><strong>You have plants,</strong> or want some. Beginners are very welcome, that is who we built it for.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how-to-join" aria-labelledby="join-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">how to join</span>
+          <h2 id="join-title">two steps, about two minutes.</h2>
+          <p>Betas on iPhone are delivered through TestFlight, Apple's official app for trying apps before they reach the App Store.</p>
+        </div>
+        <ol class="steps">
+          <li class="card step">
+            <div class="step-art">
+              <svg viewBox="0 0 300 200" role="img" aria-labelledby="art1-t">
+                <title id="art1-t">An iPhone showing the TestFlight app in the App Store with a get button</title>
+                <rect x="95" y="10" width="110" height="180" rx="18" fill="#4a2a3d"/>
+                <rect x="102" y="17" width="96" height="166" rx="12" fill="#ffffff"/>
+                <rect x="132" y="22" width="36" height="6" rx="3" fill="#4a2a3d"/>
+                <rect x="112" y="44" width="36" height="36" rx="9" fill="#1c8cf2"/>
+                <path d="M120 68l20-14-6 18-4-5z" fill="#ffffff"/>
+                <rect x="154" y="48" width="38" height="7" rx="3.5" fill="#4a2a3d"/>
+                <rect x="154" y="60" width="28" height="5" rx="2.5" fill="#b9aab3"/>
+                <rect x="154" y="70" width="34" height="12" rx="6" fill="#1c8cf2"/>
+                <text x="171" y="79.5" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="8" font-weight="700" fill="#ffffff">GET</text>
+                <rect x="112" y="94" width="76" height="5" rx="2.5" fill="#e3dde0"/>
+                <rect x="112" y="104" width="64" height="5" rx="2.5" fill="#e3dde0"/>
+                <rect x="112" y="122" width="76" height="46" rx="8" fill="#f0f4d8"/>
+                <text x="150" y="149" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="11" font-weight="700" fill="#4a2a3d">TestFlight</text>
+                <circle cx="232" cy="64" r="22" fill="#c4d777"/>
+                <path d="M224 64l6 6 11-12" fill="none" stroke="#4a2a3d" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <span class="step-num" aria-hidden="true">1</span>
+              <h3>install TestFlight from the App Store</h3>
+              <p>TestFlight is free and made by Apple. On your iPhone, open the App Store, search for TestFlight and tap get.</p>
+              <a class="btn btn-ghost" href="https://apps.apple.com/us/app/testflight/id899247664">get TestFlight</a>
+            </div>
+          </li>
+          <li class="card step">
+            <div class="step-art">
+              <svg viewBox="0 0 300 200" role="img" aria-labelledby="art2-t">
+                <title id="art2-t">An iPhone showing the pocket planter invite in TestFlight with an install button</title>
+                <rect x="95" y="10" width="110" height="180" rx="18" fill="#4a2a3d"/>
+                <rect x="102" y="17" width="96" height="166" rx="12" fill="#ffffff"/>
+                <rect x="132" y="22" width="36" height="6" rx="3" fill="#4a2a3d"/>
+                <rect x="126" y="42" width="48" height="48" rx="12" fill="#c4d777"/>
+                <path d="M134 82 C134 82 133 66 142 58 C151 50 166 56 166 56 C166 56 163 70 154 75 C145 80 134 82 134 82Z" fill="#7a8f3e"/>
+                <path d="M134 82 C140 74 152 64 166 56" fill="none" stroke="#5e6f30" stroke-width="1.6"/>
+                <text x="150" y="108" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-style="italic" font-size="12" font-weight="700" fill="#4a2a3d">pocket planter</text>
+                <rect x="118" y="116" width="64" height="5" rx="2.5" fill="#e3dde0"/>
+                <rect x="115" y="134" width="70" height="20" rx="10" fill="#1c8cf2"/>
+                <text x="150" y="148" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="10" font-weight="700" fill="#ffffff">INSTALL</text>
+                <circle cx="175" cy="150" r="13" fill="#b76f9b" opacity="0.35"/>
+                <circle cx="175" cy="150" r="6" fill="#b76f9b"/>
+                <rect x="216" y="44" width="70" height="34" rx="12" fill="#f0f4d8" stroke="#4a2a3d" stroke-width="1.5"/>
+                <text x="251" y="59" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="9" font-weight="700" fill="#4a2a3d">invite link</text>
+                <text x="251" y="71" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="8" fill="#864b70">tap to open</text>
+                <path d="M216 70 L202 82" stroke="#4a2a3d" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div>
+              <span class="step-num" aria-hidden="true">2</span>
+              <h3>tap the invite link and install pocket planter</h3>
+              <p>Open this page on your iPhone and tap the button below. TestFlight opens, tap accept, then install. pocket planter lands on your home screen like any other app.</p>
+              <a class="btn js-testflight" href="#">join the beta on TestFlight</a>
+            </div>
+          </li>
+        </ol>
+        <p class="small muted" style="margin-top:18px">Beta builds expire after 90 days. Keep automatic updates turned on in TestFlight so you always have the newest version.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="feedback-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">tell us everything</span>
+          <h2 id="feedback-title">how to send feedback</h2>
+          <p>Something broken, confusing or lovely? We read every message. Pick whichever way is easiest.</p>
+        </div>
+        <div class="ways">
+          <div class="card">
+            <h3>in TestFlight</h3>
+            <p>Take a screenshot while using pocket planter, then tap <strong>share beta feedback</strong>. You can draw on the screenshot and add a note.</p>
+          </div>
+          <div class="card">
+            <h3>in the app</h3>
+            <p>Go to <span class="path">profile &gt; send feedback</span> and tell us what happened, in your own words.</p>
+          </div>
+          <div class="card">
+            <h3>by email</h3>
+            <p>Write to <a href="mailto:hello@pocketplanter.app?subject=pocket%20planter%20beta%20feedback">hello@pocketplanter.app</a>. Screenshots help a lot.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="faq-title">
+      <div class="narrow">
+        <div class="section-head">
+          <span class="eyebrow">questions</span>
+          <h2 id="faq-title">good to know</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>is it free?</summary>
+            <div class="answer"><p>Yes. The beta is free, and there are no payments in the app.</p></div>
+          </details>
+          <details>
+            <summary>what is TestFlight?</summary>
+            <div class="answer"><p>TestFlight is Apple's official app for testing apps before they are released on the App Store. It is free, and it is how every iPhone beta is installed.</p></div>
+          </details>
+          <details>
+            <summary>is my data safe?</summary>
+            <div class="answer">
+              <p>We take it seriously and keep it simple:</p>
+              <ul>
+                <li>Your account and garden are stored with Supabase, in the United States.</li>
+                <li>The app shows your photos only to you.</li>
+                <li>The AI providers we use do not train their models on your data.</li>
+                <li>We do not sell your data, and there are no ads or third party trackers in the app.</li>
+              </ul>
+              <p>The details are in our <a href="/privacy.html">privacy policy</a>.</p>
+            </div>
+          </details>
+          <details>
+            <summary>which AI do you use?</summary>
+            <div class="answer">
+              <ul>
+                <li>Plant identification and diagnosis: Kindwise Plant.id.</li>
+                <li>ask planter: Anthropic's Claude, with Google's Gemini as a backup if Claude is unavailable.</li>
+              </ul>
+              <p>Nothing is sent to an AI service until you agree in the app, and you can turn it off any time in <span class="path">profile &gt; ai &amp; your data</span>.</p>
+            </div>
+          </details>
+          <details>
+            <summary>how do I leave the beta and delete my account?</summary>
+            <div class="answer">
+              <p>In the app, go to <span class="path">profile &gt; delete my account</span>. If you already removed the app, use our <a href="/delete-account.html">delete account page</a> and we will do it for you.</p>
+              <p>Uninstalling the app or TestFlight does not delete your account, so please delete it first if you want your data gone.</p>
+            </div>
+          </details>
+          <details>
+            <summary>why did the app stop opening?</summary>
+            <div class="answer"><p>Beta builds expire after 90 days. Open TestFlight and install the latest build. Keeping automatic updates on in TestFlight avoids this.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact">
+          <div>
+            <h2 id="contact-title">questions? say hi.</h2>
+            <p>Email <a href="mailto:hello@pocketplanter.app">hello@pocketplanter.app</a>. A real person replies, usually within 2 business days. More help on the <a href="/support.html">support page</a>.</p>
+          </div>
+          <a class="btn" href="mailto:hello@pocketplanter.app">email us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a class="logo" href="/" aria-label="pocket planter, home">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path class="leaf-primary" d="M6 38 C6 38 4 20 16 10 C28 0 44 8 44 8 C44 8 40 26 28 32 C16 38 6 38 6 38Z"/><path class="leaf-secondary" d="M28 34 C28 34 26 22 34 16 C42 10 48 16 48 16 C48 16 46 28 38 32 C30 36 28 34 28 34Z"/></svg>
+        <span>pocket planter</span>
+      </a>
+      <nav aria-label="footer">
+        <ul>
+          <li><a href="/beta.html">join the beta</a></li>
+          <li><a href="/support.html">support</a></li>
+          <li><a href="/privacy.html">privacy policy</a></li>
+          <li><a href="/terms.html">terms of service</a></li>
+          <li><a href="/delete-account.html">delete your account</a></li>
+          <li><a href="mailto:hello@pocketplanter.app">hello@pocketplanter.app</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2026 Melted Lipstick, LLC &middot; Knoxville, Tennessee, USA</p>
+    </div>
+  </footer>
+
+  <script>
+    // TestFlight link: read from the one data-testflight-url attribute on #testflight-link.
+    (function () {
+      var source = document.getElementById('testflight-link');
+      var url = ((source && source.getAttribute('data-testflight-url')) || '').trim();
+      var ok = /^https:\/\/testflight\.apple\.com\/join\/[A-Za-z0-9]+\/?$/.test(url);
+      var buttons = [source].concat([].slice.call(document.querySelectorAll('.js-testflight')));
+      buttons.forEach(function (el) {
+        if (!el) return;
+        if (ok) {
+          el.setAttribute('href', url);
+          el.removeAttribute('aria-disabled');
+          el.classList.remove('is-disabled');
+        } else {
+          el.removeAttribute('href');
+          el.setAttribute('aria-disabled', 'true');
+          el.setAttribute('role', 'link');
+          el.classList.add('is-disabled');
+          el.textContent = 'beta opens soon';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
