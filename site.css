@@ -87,14 +87,14 @@ p { margin: 0 0 14px; }
 .lede { font-size: clamp(18px, 2.4vw, 21px); line-height: 1.55; max-width: 34em; }
 .muted { color: var(--muted); }
 .small { font-size: 15px; }
-.path { font-weight: 600; white-space: nowrap; }
+.path { font-weight: 600; }
 
 /* buttons */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
   min-height: 48px; padding: 12px 24px; border-radius: 999px;
   background: var(--plum); color: var(--lime); font-weight: 700; font-size: 17px;
-  text-decoration: none; border: 2px solid var(--plum);
+  text-align: center; text-decoration: none; border: 2px solid var(--plum);
 }
 .btn:hover { background: #331c2a; color: var(--lime); }
 .btn-lime { background: var(--lime); color: var(--plum); border-color: var(--lime); }

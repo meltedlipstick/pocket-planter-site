@@ -28,7 +28,7 @@
     .hero .container { display: grid; gap: 28px; align-items: center; }
     .hero h1 { margin-bottom: 18px; }
     .hero .lede { margin-bottom: 26px; }
-    .hero-mascot { justify-self: center; width: min(62vw, 250px); height: auto; }
+    .hero-mascot { justify-self: center; width: min(48vw, 190px); height: auto; }
     .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
     .cta-note { margin: 16px 0 0; font-size: 15px; color: var(--muted); }
     .cta-note strong { color: var(--plum); }
@@ -55,7 +55,7 @@
     .check { display: flex; gap: 14px; align-items: flex-start; }
     .check svg { flex: none; width: 28px; height: 28px; margin-top: 2px; }
     .check p { margin: 0; }
-    @media (min-width: 768px) { .who { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 960px) { .who { grid-template-columns: repeat(3, 1fr); } }
 
     .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; counter-reset: step; }
     .step { display: grid; gap: 14px; }
@@ -66,7 +66,7 @@
     @media (min-width: 768px) { .steps { grid-template-columns: 1fr 1fr; } }
 
     .ways { display: grid; gap: 14px; }
-    @media (min-width: 768px) { .ways { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 960px) { .ways { grid-template-columns: repeat(3, 1fr); } }
 
     .faq { display: grid; gap: 10px; }
     .faq details { background: var(--white); border: 1px solid var(--line); border-radius: 16px; }
@@ -159,7 +159,7 @@
           </div>
         </div>
         <figure style="margin:0">
-          <div class="phone"><img src="/assets/shots/05-home.webp" width="720" height="1565" loading="lazy" alt="The pocket planter home screen: today's tasks grouped by room, with done, snooze and skip buttons for each plant, and mochi the mascot giving a tip."></div>
+          <div class="phone"><img src="/assets/shots/05-home.webp" width="720" height="1565" decoding="async" alt="The pocket planter home screen: today's tasks grouped by room, with done, snooze and skip buttons for each plant, and mochi the mascot giving a tip."></div>
           <figcaption class="phone-caption">today's tasks, grouped by room</figcaption>
         </figure>
       </div>
@@ -221,7 +221,7 @@
               <span class="step-num" aria-hidden="true">1</span>
               <h3>install TestFlight from the App Store</h3>
               <p>TestFlight is free and made by Apple. On your iPhone, open the App Store, search for TestFlight and tap get.</p>
-              <a class="btn btn-ghost" href="https://apps.apple.com/us/app/testflight/id899247664">get TestFlight in the App Store</a>
+              <a class="btn btn-ghost" href="https://apps.apple.com/us/app/testflight/id899247664">get TestFlight</a>
             </div>
           </li>
           <li class="card step">
