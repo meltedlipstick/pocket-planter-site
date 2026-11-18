@@ -5,46 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms of Service · pocket planter</title>
   <meta name="description" content="The terms for using the pocket planter app, including the plant-care and AI disclaimer.">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <style>
-    @font-face { font-family: 'DM Sans'; font-style: italic; font-weight: 300 700; font-display: swap; src: url('fonts/DMSans-italic-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-    @font-face { font-family: 'DM Sans'; font-style: italic; font-weight: 300 700; font-display: swap; src: url('fonts/DMSans-italic-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-    @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 300 700; font-display: swap; src: url('fonts/DMSans-normal-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-    @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 300 700; font-display: swap; src: url('fonts/DMSans-normal-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-    @font-face { font-family: 'Playfair Display'; font-style: italic; font-weight: 400 900; font-display: swap; src: url('fonts/PlayfairDisplay-italic-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-    @font-face { font-family: 'Playfair Display'; font-style: italic; font-weight: 400 900; font-display: swap; src: url('fonts/PlayfairDisplay-italic-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-    @font-face { font-family: 'Playfair Display'; font-style: normal; font-weight: 400 900; font-display: swap; src: url('fonts/PlayfairDisplay-normal-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-    @font-face { font-family: 'Playfair Display'; font-style: normal; font-weight: 400 900; font-display: swap; src: url('fonts/PlayfairDisplay-normal-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-    :root { --cream: #fdfaf6; --deep: #4a2a3d; --plum: #b76f9b; --gray: #666; --lime: #c4d777; }
-    *, *::before, *::after { box-sizing: border-box; }
-    body { margin: 0; background: var(--cream); color: var(--deep); font-family: 'DM Sans', system-ui, sans-serif; line-height: 1.6; }
-    header { background: #fff; border-bottom: 1px solid #ead8df; }
-    .wrap { max-width: 760px; margin: 0 auto; padding: 20px 16px; }
-    header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-    .brand { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 700; color: var(--deep); text-decoration: none; font-size: 20px; }
-    nav a { color: var(--plum); text-decoration: none; font-weight: 600; font-size: 14px; margin-left: 16px; }
-    h1 { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 700; font-size: 34px; margin: 28px 0 4px; }
-    .updated { color: var(--gray); font-size: 13px; margin-bottom: 24px; }
-    h2 { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 700; color: var(--plum); font-size: 20px; margin: 32px 0 8px; }
-    p { margin: 0 0 12px; font-size: 16px; }
-    ul { margin: 0 0 12px; padding-left: 22px; }
-    li { margin-bottom: 6px; font-size: 16px; }
-    .lead { font-weight: 700; margin: 14px 0 4px; }
-    footer { color: var(--gray); font-size: 13px; padding: 40px 16px; text-align: center; }
-    footer a { color: var(--plum); text-decoration: none; }
-    .card { background: #fff; border: 1px solid #ead8df; border-radius: 16px; padding: 20px; margin: 20px 0; }
-    .btn { display: inline-block; background: var(--plum); color: #fff; text-decoration: none; padding: 12px 20px; border-radius: 24px; font-weight: 700; }
-  </style>
+  <link rel="canonical" href="https://pocketplanter.app/terms.html">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="theme-color" content="#4a2a3d">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="pocket planter">
+  <meta property="og:title" content="pocket planter terms of service">
+  <meta property="og:description" content="The terms for using the pocket planter app, including the plant-care and AI disclaimer.">
+  <meta property="og:url" content="https://pocketplanter.app/terms.html">
+  <meta property="og:image" content="https://pocketplanter.app/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="pocket planter terms of service">
+  <meta name="twitter:description" content="The terms for using the pocket planter app, including the plant-care and AI disclaimer.">
+  <meta name="twitter:image" content="https://pocketplanter.app/og.png">
+  <link rel="preload" href="/fonts/PlayfairDisplay-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/DMSans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/site.css">
 </head>
 <body>
-  <header><div class="wrap">
-    <a class="brand" href="index.html">pocket planter</a>
-    <nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="delete-account.html">Delete account</a></nav>
-  </div></header>
-  <main class="wrap">
+  <a class="skip" href="#main">skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="/" aria-label="pocket planter, home">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path class="leaf-primary" d="M6 38 C6 38 4 20 16 10 C28 0 44 8 44 8 C44 8 40 26 28 32 C16 38 6 38 6 38Z"/><path class="leaf-secondary" d="M28 34 C28 34 26 22 34 16 C42 10 48 16 48 16 C48 16 46 28 38 32 C30 36 28 34 28 34Z"/></svg>
+        <span>pocket planter</span>
+      </a>
+      <nav class="site-nav" aria-label="main">
+        <ul>
+          <li><a href="/beta.html">beta</a></li>
+          <li><a href="/support.html">support</a></li>
+          <li><a href="/privacy.html">privacy</a></li>
+          <li><a href="/terms.html" aria-current="page">terms</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="narrow doc">
     <h1>Terms of Service</h1>
-    <div class="updated">Last updated: November 1, 2026</div>
-    <p>These terms are an agreement between you and Melted Lipstick, LLC ("we", "us"), a Tennessee limited liability company in Knoxville, Tennessee, USA, for the pocket planter app and website. By creating an account or using the app you accept them. If you do not agree, please do not use pocket planter.</p>
+    <p class="updated">Last updated: November 17, 2026</p>
+    <p>These terms are an agreement between you and Melted Lipstick, LLC (&quot;we&quot;, &quot;us&quot;), Knoxville, Tennessee, USA, for the pocket planter app and website. By creating an account or using the app you accept them. If you do not agree, please do not use pocket planter.</p>
 
     <h2>1. who can use pocket planter</h2>
     <p>You must be at least 18 years old and able to enter into a contract. You are responsible for keeping your login details safe and for everything done through your account. Tell us at hello@pocketplanter.app if you think your account has been used without permission.</p>
@@ -57,7 +59,7 @@
     <p>If we introduce paid plans, we will announce it in the app at least 30 days before any existing feature moves behind a paywall. Subscriptions, when offered, will be sold through the Apple App Store or Google Play, renew automatically until cancelled in your store account, and follow the refund rules of the store you bought from.</p>
 
     <h2>4. plant advice, identification and AI: please read this</h2>
-    <p>pocket planter gives general plant-care information generated by automated systems, including artificial intelligence (plant identification and diagnosis by Kindwise, and the planter assistant by Google's Gemini), curated species data and weather forecasts.</p>
+    <p>pocket planter gives general plant-care information generated by automated systems, including artificial intelligence (plant identification and diagnosis by Kindwise, and the planter assistant by Anthropic's Claude, with Google's Gemini as a backup), curated species data and weather forecasts.</p>
     <ul>
       <li>It can be wrong. Species identification, health diagnosis, toxicity information and care advice are suggestions, not facts, and are not a substitute for advice from a qualified horticulturist, agronomist, veterinarian or doctor.</li>
       <li>Never rely on the app to decide whether a plant is safe to eat or safe around children or pets. If a person or animal may have swallowed something harmful, contact poison control or a veterinarian immediately.</li>
@@ -73,9 +75,9 @@
     <ul>
       <li>Do not use the app for anything unlawful, to harass anyone, or to upload content you have no right to share.</li>
       <li>Do not try to break, overload, scrape or reverse engineer the app or our servers, or to bypass usage limits.</li>
-      <li>Do not use the planter assistant to generate harmful, deceptive or abusive content, or in ways that break Google's Gemini API usage policies.</li>
+      <li>Do not use the planter assistant to generate harmful, deceptive or abusive content, or in ways that break the usage policies of Anthropic or Google.</li>
     </ul>
-    <p>If you see an AI response you think is wrong or inappropriate, tell us through "send feedback" or at hello@pocketplanter.app.</p>
+    <p>If you see an AI response you think is wrong or inappropriate, tell us through &quot;send feedback&quot; or at hello@pocketplanter.app.</p>
 
     <h2>7. notifications and email</h2>
     <p>Care reminders are optional and controlled in Profile → Care reminders and in your phone settings. We send only transactional email (account, hand-offs and waitlist you requested, replies to you). We do not send marketing email to app users during the beta; if that changes, every such email will include an unsubscribe link and our postal address. Emails to the website waitlist about the launch also carry both.</p>
@@ -91,7 +93,7 @@
     <p>If you downloaded the app from Apple, the app is licensed under Apple's standard Licensed Application End User License Agreement and these terms. The agreement is between you and us, not Apple; we, not Apple, are responsible for the app, its maintenance, support, warranty and any claims about it. Apple and its subsidiaries are third-party beneficiaries of these terms and may enforce them against you. Equivalent rules apply to Google Play.</p>
 
     <h2>11. no warranty</h2>
-    <p>pocket planter is provided "as is" and "as available", without warranties of any kind, express or implied, including fitness for a particular purpose, accuracy or uninterrupted operation. Some places do not allow some of these exclusions, so they may not all apply to you.</p>
+    <p>pocket planter is provided &quot;as is&quot; and &quot;as available&quot;, without warranties of any kind, express or implied, including fitness for a particular purpose, accuracy or uninterrupted operation. Some places do not allow some of these exclusions, so they may not all apply to you.</p>
 
     <h2>12. limits on our liability</h2>
     <p>To the extent the law allows, we are not liable for indirect, incidental, special, consequential or punitive damages, or for lost plants, profits, data or goodwill, arising from your use of the app. Our total liability for any claim is limited to the greater of fifty US dollars (US$50) or the amount you paid us in the twelve months before the claim.</p>
@@ -112,8 +114,26 @@
     <h2>17. contact</h2>
     <p>Melted Lipstick, LLC, Knoxville, Tennessee, USA</p>
     <p>Email: hello@pocketplanter.app</p>
-
   </main>
-  <footer>&copy; 2026 Melted Lipstick, LLC &middot; <a href="mailto:hello@pocketplanter.app">hello@pocketplanter.app</a></footer>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a class="logo" href="/" aria-label="pocket planter, home">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path class="leaf-primary" d="M6 38 C6 38 4 20 16 10 C28 0 44 8 44 8 C44 8 40 26 28 32 C16 38 6 38 6 38Z"/><path class="leaf-secondary" d="M28 34 C28 34 26 22 34 16 C42 10 48 16 48 16 C48 16 46 28 38 32 C30 36 28 34 28 34Z"/></svg>
+        <span>pocket planter</span>
+      </a>
+      <nav aria-label="footer">
+        <ul>
+          <li><a href="/beta.html">join the beta</a></li>
+          <li><a href="/support.html">support</a></li>
+          <li><a href="/privacy.html">privacy policy</a></li>
+          <li><a href="/terms.html">terms of service</a></li>
+          <li><a href="/delete-account.html">delete your account</a></li>
+          <li><a href="mailto:hello@pocketplanter.app">hello@pocketplanter.app</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2026 Melted Lipstick, LLC &middot; Knoxville, Tennessee, USA</p>
+    </div>
+  </footer>
 </body>
 </html>
