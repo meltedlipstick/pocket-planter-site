@@ -1038,6 +1038,34 @@
       margin-top: 24px;
     }
 
+    .beta-card { display: flex; flex-direction: column; }
+    .beta-card .beta-card-text { flex: 1; }
+    .beta-step-num {
+      display: inline-grid; place-items: center;
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--plum); color: var(--lime);
+      font-family: var(--font-body); font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .beta-step-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 48px; margin-top: 18px; padding: 0 22px;
+      border-radius: 24px; border: 2px solid var(--plum);
+      color: var(--plum); background: transparent;
+      font-family: var(--font-heading); font-style: italic; font-size: 1rem;
+      text-decoration: none; transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .beta-step-btn.primary { background: var(--plum); color: var(--white); }
+    .beta-step-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(74,42,61,0.18); }
+    .beta-step-btn:focus-visible, .beta-cta:focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; }
+    .beta-qr { align-items: center; text-align: center; justify-content: center; }
+    .beta-qr-img { width: 160px; height: 160px; margin-bottom: 14px; }
+    .beta-qr .beta-card-text { flex: 0; }
+    .beta-note { font-family: var(--font-body); font-size: 0.875rem; color: #6b6b6b; margin: -24px 0 24px; }
+    @media (max-width: 767px), (hover: none) and (pointer: coarse) {
+      .beta-qr { display: none; }
+    }
+
     /* ---- WAITLIST ---- */
     .waitlist {
       background: var(--plum);
@@ -1275,7 +1303,7 @@
         <button class="lang-btn" data-lang="pt" onclick="setLang('pt')">PT</button>
         <button class="lang-btn" data-lang="es" onclick="setLang('es')">ES</button>
       </div>
-      <a href="#waitlist" class="nav-cta desktop" data-i18n="nav.waitlist">join the beta</a>
+      <a href="#beta" class="nav-cta desktop" data-i18n="nav.waitlist">join the beta</a>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -1287,7 +1315,7 @@
     <button class="close-btn" id="closeMenu" aria-label="Close">&times;</button>
     <a href="#features" onclick="closeMobileMenu()" data-i18n="nav.features">features</a>
     <a href="#how" onclick="closeMobileMenu()" data-i18n="nav.how">how it works</a>
-    <a href="#waitlist" onclick="closeMobileMenu()" data-i18n="nav.waitlist">join the beta</a>
+    <a href="#beta" onclick="closeMobileMenu()" data-i18n="nav.waitlist">join the beta</a>
     <div class="lang-switcher" role="group" aria-label="Language">
       <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
       <button class="lang-btn" data-lang="pt" onclick="setLang('pt')">PT</button>
@@ -1310,7 +1338,7 @@
         <h1 class="hero-headline" data-i18n-html="hero.headline">every plant,<br>perfectly cared for.</h1>
         <p class="hero-sub" data-i18n="hero.sub">Smart care schedules, AI plant identification, and answers to your plant questions. Everything a proud plant parent needs.</p>
         <div class="hero-buttons">
-          <a href="#waitlist" class="btn-primary" data-i18n="hero.cta1">join the beta &rarr;</a>
+          <a href="#beta" class="btn-primary" data-i18n="hero.cta1">join the beta &rarr;</a>
           <a href="#features" class="btn-outline" data-i18n="hero.cta2">see how it works &darr;</a>
         </div>
       </div>
@@ -1474,40 +1502,42 @@
     </div>
   </section>
 
-  <!-- BETA -->
+  <!-- BETA: install now. The public TestFlight link also lives in beta.html (data-testflight-url); change both if it ever changes. -->
   <section class="beta" id="beta">
     <div class="beta-inner">
-      <h2 class="section-title reveal" data-i18n="beta.title">be our first reviewer</h2>
-      <p class="beta-subtitle reveal" data-i18n="beta.subtitle">We're looking for plant parents to test pocket planter before launch. Your feedback shapes the app.</p>
+      <h2 class="section-title reveal" data-i18n="beta.title">try it today, free</h2>
+      <p class="beta-subtitle reveal" data-i18n="beta.subtitle">pocket planter is in public beta on iPhone. Two steps, about two minutes, and your feedback shapes the app.</p>
       <div class="beta-row">
         <img src="climbing-novo.webp" width="438" height="560" alt="" class="mascot-beta" loading="lazy">
       <div class="beta-grid">
         <div class="beta-card reveal" style="transition-delay:0.1s">
-          <span class="beta-card-emoji">&#127793;</span>
-          <h3 class="beta-card-title" data-i18n="beta.c1.title">beta tester</h3>
-          <p class="beta-card-text" data-i18n="beta.c1.text">Get early access before everyone else. Be the first to try every new feature.</p>
+          <span class="beta-step-num" aria-hidden="true">1</span>
+          <h3 class="beta-card-title" data-i18n="beta.s1.title">get TestFlight</h3>
+          <p class="beta-card-text" data-i18n="beta.s1.text">Apple's free app for trying apps before launch. Install it from the App Store.</p>
+          <a class="beta-step-btn" href="https://apps.apple.com/us/app/testflight/id899247664" data-i18n="beta.s1.cta">get TestFlight</a>
         </div>
         <div class="beta-card highlighted reveal" style="transition-delay:0.2s">
-          <span class="beta-card-emoji">&#128172;</span>
-          <h3 class="beta-card-title" data-i18n="beta.c2.title">share feedback</h3>
-          <p class="beta-card-text" data-i18n="beta.c2.text">Tell us what works, what doesn't, and what you wish it could do.</p>
+          <span class="beta-step-num" aria-hidden="true">2</span>
+          <h3 class="beta-card-title" data-i18n="beta.s2.title">join the beta</h3>
+          <p class="beta-card-text" data-i18n="beta.s2.text">Open this link on your iPhone, tap accept, then install. pocket planter shows up on your home screen.</p>
+          <a class="beta-step-btn primary" id="home-testflight-link" href="https://testflight.apple.com/join/Pwr6MX9c" data-i18n="beta.s2.cta">join the beta</a>
         </div>
-        <div class="beta-card reveal" style="transition-delay:0.3s">
-          <span class="beta-card-emoji">&#127873;</span>
-          <h3 class="beta-card-title" data-i18n="beta.c3.title">get rewarded</h3>
-          <p class="beta-card-text" data-i18n="beta.c3.text">Beta testers get a thank-you when we launch, announced in the app first.</p>
+        <div class="beta-card beta-qr reveal" style="transition-delay:0.3s">
+          <img src="assets/testflight-qr.svg" width="160" height="160" alt="QR code for the pocket planter beta invite" class="beta-qr-img" data-i18n-attr="alt" data-i18n="beta.qr.alt">
+          <p class="beta-card-text" data-i18n="beta.qr.text">on your computer? scan this with your iPhone camera to open the invite.</p>
         </div>
       </div>
       </div>
-      <a href="#waitlist" class="beta-cta reveal" data-i18n="beta.cta">join the beta &rarr;</a>
+      <p class="beta-note" data-i18n="beta.note">Free. For iPhone with iOS 15.1 or later. The app is in English.</p>
+      <a href="beta.html#how-to-join" class="beta-cta reveal" data-i18n="beta.cta">full guide, feedback and FAQ &rarr;</a>
     </div>
   </section>
 
   <!-- WAITLIST -->
   <section class="waitlist" id="waitlist">
     <div class="waitlist-inner reveal-scale">
-      <h2 class="waitlist-title" data-i18n="waitlist.title">join the proud plant parents.</h2>
-      <p class="waitlist-sub" data-i18n="waitlist.sub">We invite testers in small groups. Leave your email and we send the TestFlight link when it is your turn.</p>
+      <h2 class="waitlist-title" data-i18n="waitlist.title">not on iPhone yet?</h2>
+      <p class="waitlist-sub" data-i18n="waitlist.sub">No iPhone, or the beta is full? Leave your email and we'll tell you when pocket planter launches.</p>
       <form class="waitlist-form" id="waitlist-form" onsubmit="return false">
         <label class="sr-only" for="waitlist-email" data-i18n="waitlist.label">your email</label>
         <input type="email" id="waitlist-email" class="waitlist-input" placeholder="your@email.com" data-i18n-attr="placeholder" data-i18n="waitlist.placeholder" required>
@@ -1704,17 +1734,20 @@
         "how.s2.desc": "Personalized schedules for watering, fertilizing, repotting \u2014 based on your home's light and climate.",
         "how.s3.title": "watch them thrive",
         "how.s3.desc": "Track growth with photos, spot problems early, and ask Planter AI anytime.",
-        "beta.title": "be our first reviewer",
-        "beta.subtitle": "We're looking for plant parents to test pocket planter before launch. Your feedback shapes the app.",
-        "beta.c1.title": "beta tester",
-        "beta.c1.text": "Get early access before everyone else. Be the first to try every new feature.",
-        "beta.c2.title": "share feedback",
-        "beta.c2.text": "Tell us what works, what doesn't, and what you wish it could do.",
-        "beta.c3.title": "get rewarded",
-        "beta.c3.text": "Beta testers get a thank-you when we launch, announced in the app first.",
-        "beta.cta": "join the beta \u2192",
-        "waitlist.title": "join the proud plant parents.",
-        "waitlist.sub": "We invite testers in small groups. Leave your email and we send the TestFlight link when it is your turn.",
+        "beta.title": "try it today, free",
+        "beta.subtitle": "pocket planter is in public beta on iPhone. Two steps, about two minutes, and your feedback shapes the app.",
+        "beta.s1.title": "get TestFlight",
+        "beta.s1.text": "Apple's free app for trying apps before launch. Install it from the App Store.",
+        "beta.s1.cta": "get TestFlight",
+        "beta.s2.title": "join the beta",
+        "beta.s2.text": "Open this link on your iPhone, tap accept, then install. pocket planter shows up on your home screen.",
+        "beta.s2.cta": "join the beta",
+        "beta.qr.alt": "QR code for the pocket planter beta invite",
+        "beta.qr.text": "on your computer? scan this with your iPhone camera to open the invite.",
+        "beta.note": "Free. For iPhone with iOS 15.1 or later. The app is in English.",
+        "beta.cta": "full guide, feedback and FAQ →",
+        "waitlist.title": "not on iPhone yet?",
+        "waitlist.sub": "No iPhone, or the beta is full? Leave your email and we'll tell you when pocket planter launches.",
         "waitlist.placeholder": "your@email.com",
         "waitlist.label": "your email",
         "waitlist.purpose": "we'll email you about the launch, nothing else. <a href=\"privacy.html\">privacy policy</a>.",
@@ -1780,17 +1813,20 @@
         "how.s2.desc": "Cronograma personalizado de rega, aduba\u00e7\u00e3o e replantio \u2014 baseado na luz e no clima da sua casa.",
         "how.s3.title": "veja elas florescerem",
         "how.s3.desc": "Acompanhe o crescimento com fotos, perceba problemas cedo e pergunte ao Planter IA quando quiser.",
-        "beta.title": "seja nosso primeiro revisor",
-        "beta.subtitle": "Estamos procurando pais de plantas para testar o pocket planter antes do lan\u00e7amento. Seu feedback molda o app.",
-        "beta.c1.title": "testador beta",
-        "beta.c1.text": "Acesso antecipado antes de todo mundo. Seja o primeiro a testar cada nova funcionalidade.",
-        "beta.c2.title": "compartilhe feedback",
-        "beta.c2.text": "Nos conte o que funciona, o que n\u00e3o funciona e o que voc\u00ea gostaria que fizesse.",
-        "beta.c3.title": "seja recompensado",
-        "beta.c3.text": "Quem testa ganha um agradecimento no lan\u00e7amento, anunciado primeiro no app. Sem cart\u00e3o de cr\u00e9dito.",
-        "beta.cta": "entrar no beta \u2192",
-        "waitlist.title": "junte-se aos orgulhosos pais de plantas.",
-        "waitlist.sub": "Convidamos em grupos pequenos. Deixe seu e-mail e mandamos o link do TestFlight quando chegar a sua vez.",
+        "beta.title": "experimente hoje, de graça",
+        "beta.subtitle": "o pocket planter está em beta público no iPhone. Dois passos, uns dois minutos, e seu feedback molda o app.",
+        "beta.s1.title": "baixe o TestFlight",
+        "beta.s1.text": "O app gratuito da Apple para testar apps antes do lançamento. Instale pela App Store.",
+        "beta.s1.cta": "baixar o TestFlight",
+        "beta.s2.title": "entre no beta",
+        "beta.s2.text": "Abra este link no iPhone, toque em aceitar e depois em instalar. O pocket planter aparece na sua tela inicial.",
+        "beta.s2.cta": "entrar no beta",
+        "beta.qr.alt": "QR code do convite do beta do pocket planter",
+        "beta.qr.text": "está no computador? aponte a câmera do iPhone para abrir o convite.",
+        "beta.note": "Grátis. Para iPhone com iOS 15.1 ou mais novo. O app é em inglês.",
+        "beta.cta": "guia completo, feedback e perguntas →",
+        "waitlist.title": "ainda não tem iPhone?",
+        "waitlist.sub": "Sem iPhone, ou o beta lotou? Deixe seu e-mail e avisamos quando o pocket planter for lançado.",
         "waitlist.placeholder": "seu@email.com",
         "waitlist.label": "seu e-mail",
         "waitlist.purpose": "vamos te enviar e-mails sobre o lançamento, nada mais. <a href=\"privacy.html\">política de privacidade</a>.",
@@ -1856,17 +1892,20 @@
         "how.s2.desc": "Horarios personalizados de riego, fertilizaci\u00f3n y trasplante \u2014 seg\u00fan la luz y el clima de tu hogar.",
         "how.s3.title": "m\u00edralas prosperar",
         "how.s3.desc": "Sigue el crecimiento con fotos, detecta problemas a tiempo y pregunta a Planter IA cuando quieras.",
-        "beta.title": "s\u00e9 nuestro primer revisor",
-        "beta.subtitle": "Buscamos padres de plantas para probar pocket planter antes del lanzamiento. Tu feedback da forma a la app.",
-        "beta.c1.title": "tester beta",
-        "beta.c1.text": "Acceso anticipado antes que todos. S\u00e9 el primero en probar cada nueva funci\u00f3n.",
-        "beta.c2.title": "comparte feedback",
-        "beta.c2.text": "Cu\u00e9ntanos qu\u00e9 funciona, qu\u00e9 no y qu\u00e9 desear\u00edas que hiciera.",
-        "beta.c3.title": "s\u00e9 recompensado",
-        "beta.c3.text": "Quienes prueban reciben un agradecimiento al lanzamiento, anunciado primero en la app.",
-        "beta.cta": "unirme a la beta \u2192",
-        "waitlist.title": "\u00fanete a los orgullosos padres de plantas.",
-        "waitlist.sub": "Invitamos en grupos peque\u00f1os. Deja tu correo y te mandamos el enlace de TestFlight cuando sea tu turno.",
+        "beta.title": "pruébalo hoy, gratis",
+        "beta.subtitle": "pocket planter está en beta pública en iPhone. Dos pasos, unos dos minutos, y tu feedback da forma a la app.",
+        "beta.s1.title": "descarga TestFlight",
+        "beta.s1.text": "La app gratuita de Apple para probar apps antes del lanzamiento. Instálala desde la App Store.",
+        "beta.s1.cta": "descargar TestFlight",
+        "beta.s2.title": "únete a la beta",
+        "beta.s2.text": "Abre este enlace en tu iPhone, toca aceptar y luego instalar. pocket planter aparece en tu pantalla de inicio.",
+        "beta.s2.cta": "unirme a la beta",
+        "beta.qr.alt": "código QR de la invitación a la beta de pocket planter",
+        "beta.qr.text": "¿estás en la computadora? escanéalo con la cámara del iPhone para abrir la invitación.",
+        "beta.note": "Gratis. Para iPhone con iOS 15.1 o posterior. La app está en inglés.",
+        "beta.cta": "guía completa, feedback y preguntas →",
+        "waitlist.title": "¿aún sin iPhone?",
+        "waitlist.sub": "¿Sin iPhone, o la beta se llenó? Déjanos tu correo y te avisamos cuando pocket planter se lance.",
         "waitlist.placeholder": "tu@email.com",
         "waitlist.label": "tu correo",
         "waitlist.purpose": "te escribiremos sobre el lanzamiento, nada más. <a href=\"privacy.html\">política de privacidad</a>.",
